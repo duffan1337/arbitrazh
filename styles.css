@@ -1441,9 +1441,6 @@ th {
 
 .page6-left-section img {
   position: relative;
-  /* max-width: 350px;
-  maxheight: 200px;
-  margin-top: 100px; */
 }
 
 .page6-left-section {
@@ -1751,7 +1748,9 @@ th {
     max-height: 270px;
     max-width: 190px;
   }
-
+  .image-stack__item--pills img {
+    top: 25%;
+  }
   .page7-section1 {
     flex-direction: column;
   }
@@ -2260,6 +2259,7 @@ th {
   font-family: 'Roboto', regular;
   height: 50px;
   font-size: 14px;
+  padding: 10px;
 }
 .footer-list-elements {
   display: flex;
