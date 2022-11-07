@@ -14,18 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
       const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
       const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
       const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
-      $hours.textContent = hours < 10 ? '0' + hours : hours;
-      $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-      $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+      $hours[1].textContent = hours < 10 ? '0' + hours : hours;
+      $minutes[1].textContent = minutes < 10 ? '0' + minutes : minutes;
+      $seconds[1].textContent = seconds < 10 ? '0' + seconds : seconds;
+      $hours[0].textContent = hours < 10 ? '0' + hours : hours;
+      $minutes[0].textContent = minutes < 10 ? '0' + minutes : minutes;
+      $seconds[0].textContent = seconds < 10 ? '0' + seconds : seconds;
     }
   
   
     
     // получаем элементы, содержащие компоненты даты
 
-    const $hours = document.querySelector('.timer__hours');
-    const $minutes = document.querySelector('.timer__minutes');
-    const $seconds = document.querySelector('.timer__seconds');
+    const $hours = document.querySelectorAll('.timer__hours');
+    const $minutes = document.querySelectorAll('.timer__minutes');
+    const $seconds = document.querySelectorAll('.timer__seconds');
     // вызываем функцию countdownTimer
     countdownTimer();
     // вызываем функцию countdownTimer каждую секунду
@@ -36,13 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
   //изменение имени при медиазапросе
   function changeTimeName(match){    
 
-  const $hours = document.querySelector(".hours");
-  const $minutes = document.querySelector(".minutes");
-  const $seconds = document.querySelector(".seconds");// 
+  const $hours = document.querySelectorAll(".hours");
+  const $minutes = document.querySelectorAll(".minutes");
+  const $seconds = document.querySelectorAll(".seconds");// 
   
-    $hours.textContent = match.matches ? 'HH': "hours";
-    $minutes.textContent = match.matches ? 'MM' : "minutes";
-    $seconds.textContent = match.matches ? 'SS' : "seconds";
+    $hours[1].textContent = match.matches ? 'HH': "hours";
+    $minutes[1].textContent = match.matches ? 'MM' : "minutes";
+    $seconds[1].textContent = match.matches ? 'SS' : "seconds";
+
+    $hours[0].textContent = match.matches ? 'HH': "hours";
+    $minutes[0].textContent = match.matches ? 'MM' : "minutes";
+    $seconds[0].textContent = match.matches ? 'SS' : "seconds";
   
   }
   
@@ -64,17 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     popup.classList.add('invise');
   });
   
-  
-  function MyResponse(status) {
-  
-    status ? document.getElementById('send-status').innerHTML = "Success!" : 
-    document.getElementById('send-status').innerHTML = "Error!";
-  
-    status ? document.getElementById('status-description').innerHTML = "You have successfully subscribed to the email newsletter" 
-    : document.getElementById('status-description').innerHTML = "Something went wrong(Your Mail so long)";;
-  
-    document.getElementById('popup').classList.remove('invise');
-  }
+
   
   
 //   document.getElementById('form').addEventListener('submit', function(e) {
