@@ -2256,11 +2256,18 @@ th {
 }
 
 .footer-container {
-  padding-top: 15px;
+  padding: 15px;
   background-color: rgb(218, 218, 218);
   font-family: 'Roboto', regular;
   display: flex;
   justify-content: space-around;
   height: 50px;
   font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    font-family: 'Roboto', regular;
+    font-size: 11px;
+  }
 }
