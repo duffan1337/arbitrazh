@@ -71,30 +71,3 @@ document.addEventListener('DOMContentLoaded', function() {
     popup.classList.add('invise');
   });
   
-
-  
-  
-//   document.getElementById('form').addEventListener('submit', function(e) {
-//   e.preventDefault(); 
-//   let data = document.getElementById('email').value 
-//   let countOfMail=data.length                     //ответ сервера зависит от количества букв введнных в форму, до 13 ответ сервера 200,
-//       var xhr = new XMLHttpRequest();
-//     xhr.open("GET", `https://reqres.in/api/products/${countOfMail}`
-//     );            
-  
-//     xhr.onload = function(){
-//       console.log(xhr.responseText)
-//         if(xhr.status === 200)
-//         {
-//           document.getElementById('email').value=""
-//           MyResponse(true)
-//         }
-//         else
-//         {
-//           document.getElementById('email').value=""
-//           MyResponse(false)
-//         }
-//     };
-//     xhr.send();
-//   })
-  
